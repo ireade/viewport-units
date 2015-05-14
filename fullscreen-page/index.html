@@ -14,13 +14,13 @@
 	}
 
 	section.red {
-		/*background-color: red;*/
+		background-color: #CB7A68;
 	}
 	section.green {
-		background-color: green;
+		background-color: #5ACC7F;
 	}
 	section.blue {
-		background-color: blue;
+		background-color: #94EAE4;
 	}
 
 	.container {
@@ -29,8 +29,12 @@
 
 
 	nav {
-		font-size: 3rem;
+		font-size: 8rem;
+		line-height: 1;
 		cursor: pointer;
+		width: 5rem;
+		height: auto;
+		margin: 0 auto;
 	}
 
 	nav.up {
@@ -49,16 +53,13 @@
 	<section class="red">
 		<div class="container">
 
-			<nav class="up">UP</nav>
-
-
 			<h1>Section Title</h1>
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Certe nihil nisi quod possit ipsum propter se iure laudari. Aperiendum est igitur, quid sit voluptas; Que Manilium, ab iisque M. Maximus dolor, inquit, brevis est. Sed utrum hortandus es nobis, Luci, inquit, an etiam tua sponte propensus es? Duo Reges: constructio interrete. Ut in geometria, prima si dederis, danda sunt omnia.</p>
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Certe nihil nisi quod possit ipsum propter se iure laudari. Aperiendum est igitur, quid sit voluptas; Que Manilium, ab iisque M. Maximus dolor, inquit, brevis est. Sed utrum hortandus es nobis, Luci, inquit, an etiam tua sponte propensus es? Duo Reges: constructio interrete. Ut in geometria, prima si dederis, danda sunt omnia.</p>
 
-			<nav class="down">DOWN</nav>
+			<nav class="down">&#65516;</nav>
 
 		</div>
 	</section>
@@ -67,7 +68,7 @@
 	<section class="blue">
 		<div class="container">
 
-			<nav class="up">UP</nav>
+			<nav class="up">&#65514;</nav>
 
 
 			<h1>Section Title</h1>
@@ -77,7 +78,7 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Certe nihil nisi quod possit ipsum propter se iure laudari. Aperiendum est igitur, quid sit voluptas; Que Manilium, ab iisque M. Maximus dolor, inquit, brevis est. Sed utrum hortandus es nobis, Luci, inquit, an etiam tua sponte propensus es? Duo Reges: constructio interrete. Ut in geometria, prima si dederis, danda sunt omnia.</p>
 
 
-			<nav class="down">DOWN</nav>
+			<nav class="down">&#65516;</nav>
 
 		</div>
 	</section>
@@ -85,7 +86,7 @@
 	<section class="green">
 		<div class="container">
 
-			<nav class="up">UP</nav>
+			<nav class="up">&#65514;</nav>
 
 
 			<h1>Section Title</h1>
@@ -94,7 +95,6 @@
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Certe nihil nisi quod possit ipsum propter se iure laudari. Aperiendum est igitur, quid sit voluptas; Que Manilium, ab iisque M. Maximus dolor, inquit, brevis est. Sed utrum hortandus es nobis, Luci, inquit, an etiam tua sponte propensus es? Duo Reges: constructio interrete. Ut in geometria, prima si dederis, danda sunt omnia.</p>
 
-			<nav class="down">DOWN</nav>
 
 		</div>
 	</section>
@@ -105,13 +105,21 @@
 
     	$('.down').on('click', function() {
 
-    		console.log($(window).scrollTop() )
+    		var movePos = $(window).scrollTop() + $(window).height();
 
     		$('html, body').animate({
-		        scrollTop: "500em"
-		    }, 2000);
+		        scrollTop: movePos
+		    }, 1000);
     	})
 
+    	$('.up').on('click', function() {
+
+    		var movePos = $(window).scrollTop() - $(window).height();
+
+    		$('html, body').animate({
+		        scrollTop: movePos
+		    }, 1000);
+    	})
 
     </script>
 </body>
