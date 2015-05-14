@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Full Screen Page | Viewport Units</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../base.css">
+
+	<style>
+
+	section {
+		width: 100%;
+		height: 100vh;
+	}
+
+	section.red {
+		/*background-color: red;*/
+	}
+	section.green {
+		background-color: green;
+	}
+	section.blue {
+		background-color: blue;
+	}
+
+	.container {
+		overflow: hidden;
+	}
+
+
+	nav {
+		font-size: 3rem;
+		cursor: pointer;
+	}
+
+	nav.up {
+		margin-bottom: 2rem;
+	}
+	nav.down {
+		margin-top: 2rem;
+	}
+
+	</style>
+
+</head>
+<body>
+
+
+	<section class="red">
+		<div class="container">
+
+			<nav class="up">UP</nav>
+
+
+			<h1>Section Title</h1>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Certe nihil nisi quod possit ipsum propter se iure laudari. Aperiendum est igitur, quid sit voluptas; Que Manilium, ab iisque M. Maximus dolor, inquit, brevis est. Sed utrum hortandus es nobis, Luci, inquit, an etiam tua sponte propensus es? Duo Reges: constructio interrete. Ut in geometria, prima si dederis, danda sunt omnia.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Certe nihil nisi quod possit ipsum propter se iure laudari. Aperiendum est igitur, quid sit voluptas; Que Manilium, ab iisque M. Maximus dolor, inquit, brevis est. Sed utrum hortandus es nobis, Luci, inquit, an etiam tua sponte propensus es? Duo Reges: constructio interrete. Ut in geometria, prima si dederis, danda sunt omnia.</p>
+
+			<nav class="down">DOWN</nav>
+
+		</div>
+	</section>
+
+
+	<section class="blue">
+		<div class="container">
+
+			<nav class="up">UP</nav>
+
+
+			<h1>Section Title</h1>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Certe nihil nisi quod possit ipsum propter se iure laudari. Aperiendum est igitur, quid sit voluptas; Que Manilium, ab iisque M. Maximus dolor, inquit, brevis est. Sed utrum hortandus es nobis, Luci, inquit, an etiam tua sponte propensus es? Duo Reges: constructio interrete. Ut in geometria, prima si dederis, danda sunt omnia.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Certe nihil nisi quod possit ipsum propter se iure laudari. Aperiendum est igitur, quid sit voluptas; Que Manilium, ab iisque M. Maximus dolor, inquit, brevis est. Sed utrum hortandus es nobis, Luci, inquit, an etiam tua sponte propensus es? Duo Reges: constructio interrete. Ut in geometria, prima si dederis, danda sunt omnia.</p>
+
+
+			<nav class="down">DOWN</nav>
+
+		</div>
+	</section>
+
+	<section class="green">
+		<div class="container">
+
+			<nav class="up">UP</nav>
+
+
+			<h1>Section Title</h1>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Certe nihil nisi quod possit ipsum propter se iure laudari. Aperiendum est igitur, quid sit voluptas; Que Manilium, ab iisque M. Maximus dolor, inquit, brevis est. Sed utrum hortandus es nobis, Luci, inquit, an etiam tua sponte propensus es? Duo Reges: constructio interrete. Ut in geometria, prima si dederis, danda sunt omnia.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Certe nihil nisi quod possit ipsum propter se iure laudari. Aperiendum est igitur, quid sit voluptas; Que Manilium, ab iisque M. Maximus dolor, inquit, brevis est. Sed utrum hortandus es nobis, Luci, inquit, an etiam tua sponte propensus es? Duo Reges: constructio interrete. Ut in geometria, prima si dederis, danda sunt omnia.</p>
+
+			<nav class="down">DOWN</nav>
+
+		</div>
+	</section>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+
+    	$('.down').on('click', function() {
+
+    		console.log($(window).scrollTop() )
+
+    		$('html, body').animate({
+		        scrollTop: "500em"
+		    }, 2000);
+    	})
+
+
+    </script>
+</body>
+</html>
