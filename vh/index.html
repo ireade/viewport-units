@@ -10,7 +10,7 @@
 	<style>
 
 	html {
-		border: 3px solid red;
+		border: 2px solid red;
 		height: 100%;
 	}
 
@@ -18,26 +18,77 @@
 		height: 100%;
 	}
 
-	.main {
-		background-color: pink;
-		height: 100%;
+	pre {
+		background-color: white;
+		width: 80%;
+		margin: 30px auto;
+		padding: 20px 0;
+		text-align: left;
+		overflow-x: scroll;
 	}
 
-	.footer {
-		visibility: visible;
-		height: 100px;
-		background-color: yellow
+
+	.fullscreen {
+		background-color: rgb(240, 240, 240);
+		height: 100%;
+		padding: 20px;
 	}
+
+	.fullscreen pre {
+		max-height: 60%;
+		overflow-y: scroll;
+	}
+
+	@media screen and (max-height: 600px) {
+		.fullscreen pre {
+			max-height: 40%;
+		}
+	}
+
+	.extra-content {
+		min-height: 100px;
+		background-color: cornflowerblue
+	}
+
+	
 
 	</style>
 </head>
 <body>
 
-	<div class="main">
-		Content goes here
+	<div class="fullscreen">
+		
+		<h1>VH Workaround</h1>
+
+		<p>A workaround to using 100vh because of <a href="http://bitsofco.de/2015/viewport-vs-percentage-units">its cross-browser issues</a>. This uses 100% height on html and body elements. Note that it causes the extra content to sit outside the html element.</p>
+
+		<p>Concept from <a href="https://www.google.com/ideas/">google.com/ideas</a></p>
+
+		<pre>
+		html {
+		  border: 2px solid red;
+		  height: 100%;
+		}
+
+		body {
+		  height: 100%;
+		}
+
+		.fullscreen {
+		  background-color: rgb(240, 240, 240);
+		  height: 100%;
+		}</pre>
 	</div>
 
-	<div class="footer">Test</div>
+	<div class="extra-content">
+		&nbsp;
+		<pre>
+		.extra-content {
+		  height: 100px; /* can be any height */
+		  background-color: cornflowerblue;
+		}</pre>
+		&nbsp;
+	</div>
 
 
 </body>
