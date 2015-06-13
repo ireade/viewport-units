@@ -67,6 +67,7 @@ html {
 
 html {
 	font-size: 62.5%;
+	color: #fff;
 }
 
 body {
@@ -74,7 +75,7 @@ body {
 	font-family: 'Raleway';
 	line-height: 1.6;
 	text-align: center;
-	color: rgb(40, 40, 40a);
+	color: rgb(40, 40, 40);
 }
 
 h1 {
